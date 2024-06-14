@@ -1,5 +1,7 @@
 package com.itwillbs.persistence;
 
+import java.util.List;
+
 import javax.inject.Inject;
 
 import org.apache.ibatis.session.SqlSession;
@@ -26,6 +28,17 @@ public class BoardDAOImpl implements BoardDAO {
 	public void create(BoardVO vo) throws Exception {
 		logger.debug(" 연결된 mapper에 SQL 구문 실행 ");
 		sqlSession.insert(NAMESPACE +"create", vo);
+	}
+
+	@Override
+	public List<BoardVO> listALL() throws Exception {
+		logger.debug(" listAll() 실행 ");
+		// mapper에 설정된  SQL 구문을 싱행(+디비연결)
+		
+		//List<BoardVO> boardList = sqlSession.selectList(statement);
+		// return boardList
+		
+		return sqlSession.selectList(NAMESPACE +"listALL");
 	}
 	
 	
