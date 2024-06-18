@@ -54,6 +54,13 @@ public class BoardDAOImpl implements BoardDAO {
 		
 		return sqlSession.selectOne(NAMESPACE + "getBoard", bno);
 	}
+
+	@Override
+	public void updateBoard(BoardVO vo) throws Exception {
+		logger.debug(" updateBoard(BoardVO vo) 실행 ");
+		
+		sqlSession.update(NAMESPACE+"updateBoard", vo);
+	}
 	
 	
 	
