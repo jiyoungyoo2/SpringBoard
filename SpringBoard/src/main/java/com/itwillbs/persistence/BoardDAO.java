@@ -11,5 +11,10 @@ public interface BoardDAO {
 	
 	// 게시판 리스트(ALL)
 	public List<BoardVO> listALL() throws Exception;
+	
+	public void updateReadCnt(int bno) throws Exception;
+	
+	// 게시판 글 내용 보기
+	public BoardVO getBoard(int bno) throws Exception;
 
 }
