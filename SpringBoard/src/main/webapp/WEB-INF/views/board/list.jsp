@@ -95,10 +95,14 @@
 		
 		if(result == "createOK"){
 			//alert(" 글쓰기 완료! 리스트 페이지로 이동! ");
-			$("#myModal").modal("show");
+			//$("#myModal").modal("show");
+			Swal.fire("아이티윌 테스트!");
+			
+		}
+		if(result == "updateOK"){
+			Swal.fire("게시판 글 수정 완료!");
 		}
 		
-		//Swal.fire("아이티윌 테스트!");
 		
 	});
 </script>

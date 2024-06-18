@@ -16,5 +16,7 @@ public interface BoardDAO {
 	
 	// 게시판 글 내용 보기
 	public BoardVO getBoard(int bno) throws Exception;
+	
+	public void updateBoard(BoardVO vo) throws Exception;
 
 }
