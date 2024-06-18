@@ -18,5 +18,8 @@ public interface BoardDAO {
 	public BoardVO getBoard(int bno) throws Exception;
 	
 	public void updateBoard(BoardVO vo) throws Exception;
+	
+	// 게시판 글 내용 삭제하기
+	public void deleteBoard(int bno) throws Exception;
 
 }
